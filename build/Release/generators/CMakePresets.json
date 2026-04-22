@@ -1,0 +1,66 @@
+{
+    "version": 3,
+    "vendor": {
+        "conan": {}
+    },
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 15,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "conan-release",
+            "displayName": "'conan-release' config",
+            "description": "'conan-release' configure using 'Unix Makefiles' generator",
+            "generator": "Unix Makefiles",
+            "cacheVariables": {
+                "CMAKE_MAKE_PROGRAM": "/usr/bin/make",
+                "CMAKE_POLICY_DEFAULT_CMP0091": "NEW",
+                "CMAKE_BUILD_TYPE": "Release"
+            },
+            "environment": {
+                "STRIP": "/usr/bin/strip",
+                "NM": "/usr/bin/nm",
+                "RANLIB": "/usr/bin/ranlib",
+                "AR": "/usr/bin/ar",
+                "QT_PLUGIN_PATH": "/Users/maoxiangqian/.conan2/p/b/qtb4435a2087310/p/plugins",
+                "QT_HOST_PATH": "/Users/maoxiangqian/.conan2/p/b/qtb4435a2087310/p",
+                "ACLOCAL_PATH": "$penv{ACLOCAL_PATH}:/Users/maoxiangqian/.conan2/p/b/libto65877dcd07b57/p/res/aclocal",
+                "AUTOMAKE_CONAN_INCLUDES": "$penv{AUTOMAKE_CONAN_INCLUDES}:/Users/maoxiangqian/.conan2/p/b/libto65877dcd07b57/p/res/aclocal",
+                "AUTOCONF": "/Users/maoxiangqian/.conan2/p/autoc321298d49d384/p/bin/autoconf",
+                "AUTORECONF": "/Users/maoxiangqian/.conan2/p/autoc321298d49d384/p/bin/autoreconf",
+                "AUTOHEADER": "/Users/maoxiangqian/.conan2/p/autoc321298d49d384/p/bin/autoheader",
+                "AUTOM4TE": "/Users/maoxiangqian/.conan2/p/autoc321298d49d384/p/bin/autom4te",
+                "M4": "/Users/maoxiangqian/.conan2/p/m41ab05390709b3/p/bin/m4"
+            },
+            "toolchainFile": "generators/conan_toolchain.cmake",
+            "binaryDir": "/Users/maoxiangqian/endoscope/build/Release"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "conan-release",
+            "configurePreset": "conan-release",
+            "jobs": 10
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "conan-release",
+            "configurePreset": "conan-release",
+            "execution": {
+                "jobs": 10
+            },
+            "environment": {
+                "QT_PLUGIN_PATH": "/Users/maoxiangqian/.conan2/p/b/qtb4435a2087310/p/plugins",
+                "PostgreSQL_ROOT": "/Users/maoxiangqian/.conan2/p/b/libpq93f043198fe90/p",
+                "OPENSSL_MODULES": "/Users/maoxiangqian/.conan2/p/opensf16b602a2157d/p/lib/ossl-modules",
+                "ACLOCAL_PATH": "$penv{ACLOCAL_PATH}:/Users/maoxiangqian/.conan2/p/b/libto65877dcd07b57/p/res/aclocal",
+                "AUTOMAKE_CONAN_INCLUDES": "$penv{AUTOMAKE_CONAN_INCLUDES}:/Users/maoxiangqian/.conan2/p/b/libto65877dcd07b57/p/res/aclocal",
+                "PATH": "/Users/maoxiangqian/.conan2/p/automc647ac30ac192/p/bin:/Users/maoxiangqian/.conan2/p/autoc321298d49d384/p/bin:/Users/maoxiangqian/.conan2/p/m41ab05390709b3/p/bin:$penv{PATH}",
+                "M4": "/Users/maoxiangqian/.conan2/p/m41ab05390709b3/p/bin/m4"
+            }
+        }
+    ]
+}
